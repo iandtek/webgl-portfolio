@@ -1,4 +1,4 @@
-# 2015, a WebGL experiment
+# a WebGL experiment
 
 ## Instructions
 
