@@ -19,52 +19,38 @@ var smoke = new Smoke({
 });
 neonsSection.add(smoke.el);
 
-var neonA = new Neon({width: 10});
-neonA.el.position.set(-10, 2.5, 0);
+var neonA = new Neon();
 
-var neonA2 = new Neon({width: 10});
-neonA2.el.position.set(10, -2.5, 0);
-
-var neonB = new Neon({width: 20});
+var neonB = new Neon();
 neonB.el.position.set(0, 0, 0);
 neonB.el.rotation.z = 2;
 
-var neonC = new Neon({width: 20});
+var neonC = new Neon();
 neonC.el.position.set(0, 13, 0);
 neonC.el.rotation.z = 2;
 
-var neonD = new Neon({width: 20});
-neonD.el.position.set(0, -13, 0);
-neonD.el.rotation.z = 2;
-
-var neonE = new Neon({width: 20});
+var neonD = new Neon();
 neonD.el.position.set(0, -13, 0);
 neonD.el.rotation.z = 2;
 
 neonsSection.add(neonA.el);
-neonsSection.add(neonA2.el);
 neonsSection.add(neonB.el);
 neonsSection.add(neonC.el);
 neonsSection.add(neonD.el);
-neonsSection.add(neonE.el);
 
 neonA.el.visible = false;
-neonA2.el.visible = false;
 neonB.el.visible = false;
 neonC.el.visible = false;
 neonD.el.visible = false;
-neonE.el.visible = false;
 smoke.el.visible = false;
 
 neonsSection.onStart(function () {
   neonA.start();
-  neonA2.start();
   neonB.start();
   neonC.start();
   neonD.start();
 
   neonA.el.visible = true;
-  neonA2.el.visible = true;
   neonB.el.visible = true;
   neonC.el.visible = true;
   neonD.el.visible = true;
@@ -72,13 +58,11 @@ neonsSection.onStart(function () {
 
 neonsSection.onStop(function () {
   neonA.stop();
-  neonA2.stop();
   neonB.stop();
   neonC.stop();
   neonD.stop();
 
   neonA.el.visible = false;
-  neonA2.el.visible = false;
   neonB.el.visible = false;
   neonC.el.visible = false;
   neonD.el.visible = false;
